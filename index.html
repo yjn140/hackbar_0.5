@@ -79,7 +79,7 @@
                                         <v-list-item-title>转储当前查询有效负载</v-list-item-title>
                                     </v-list-item>
                                     <v-list-item @click="applyFunction('Payload.SQLi.MySQL.dumpInOneShot', true)">
-                                        <v-list-item-title>Dump in one shot payload</v-list-item-title>
+                                        <v-list-item-title>倾倒所有载荷</v-list-item-title>
                                     </v-list-item>
                                     <v-list-item @click="sqlInjectionPrompt('Payload.SQLi.MySQL.unionSelect', false)">
                                         <v-list-item-title>联合查询</v-list-item-title>
@@ -158,17 +158,17 @@
                             </v-list-item>
                             <v-divider></v-divider>
                             <v-list-item @click="applyFunction('Encode.Html.encode')">
-                                <v-list-item-title>Html encode</v-list-item-title>
+                                <v-list-item-title>Html 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.Html.decode')">
-                                <v-list-item-title>Html decode</v-list-item-title>
+                                <v-list-item-title>Html 解码</v-list-item-title>
                             </v-list-item>
                             <v-divider></v-divider>
                             <v-list-item @click="applyFunction('Encode.CharCode.encode')">
-                                <v-list-item-title>String.fromCharCode encode</v-list-item-title>
+                                <v-list-item-title>String.fromCharCode 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.CharCode.decode')">
-                                <v-list-item-title>String.fromCharCode decode</v-list-item-title>
+                                <v-list-item-title>String.fromCharCode 解码</v-list-item-title>
                             </v-list-item>
                         </v-list>
                     </v-menu>
@@ -249,34 +249,34 @@
               </template>
                         <v-list dense>
                             <v-list-item @click="applyFunction('Encode.URL.encode')">
-                                <v-list-item-title>URL encode</v-list-item-title>
+                                <v-list-item-title>URL 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.URL.decode')">
-                                <v-list-item-title>URL decode</v-list-item-title>
+                                <v-list-item-title>URL 解码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.URL.decodePlus')">
-                                <v-list-item-title>URL decode (+ => space)</v-list-item-title>
+                                <v-list-item-title>URL 解码 (+ => space)</v-list-item-title>
                             </v-list-item>
                             <v-divider></v-divider>
                             <v-list-item @click="applyFunction('Encode.Base64.encode')">
-                                <v-list-item-title>Base64 encode</v-list-item-title>
+                                <v-list-item-title>Base64 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.Base64.decode')">
-                                <v-list-item-title>Base64 decode</v-list-item-title>
+                                <v-list-item-title>Base64 解码</v-list-item-title>
                             </v-list-item>
                             <v-divider></v-divider>
                             <v-list-item @click="applyFunction('Encode.Hexadecimal.encode')">
-                                <v-list-item-title>Hexadecimal encode</v-list-item-title>
+                                <v-list-item-title>Hexadecimal 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.Hexadecimal.decode')">
-                                <v-list-item-title>Hexadecimal decode</v-list-item-title>
+                                <v-list-item-title>Hexadecimal 解码</v-list-item-title>
                             </v-list-item>
                             <v-divider></v-divider>
                             <v-list-item @click="applyFunction('Encode.Unicode.encode')">
-                                <v-list-item-title>Unicode encode</v-list-item-title>
+                                <v-list-item-title>Unicode 编码</v-list-item-title>
                             </v-list-item>
                             <v-list-item @click="applyFunction('Encode.Unicode.decode')">
-                                <v-list-item-title>Unicode decode</v-list-item-title>
+                                <v-list-item-title>Unicode 解码</v-list-item-title>
                             </v-list-item>
                         </v-list>
                     </v-menu>
@@ -339,7 +339,7 @@
                             <v-textarea label="Body" rows="1" auto-grow v-show="request.body.enabled" v-model="request.body.content" @focus="onFocus($event)" @keydown.stop></v-textarea>
                         </v-col>
                         <v-col cols="12" md="6">
-                            <v-btn id="add-header-button" @click="addHeader()">添加请求头HEADER</v-btn>
+                            <v-btn id="add-header-button" @click="addHeader()">添加请求头 HEADER</v-btn>
                             <v-layout class="header-settings" align-center v-for="(header, index) in request.headers" :key="index">
                                 <v-checkbox v-model="header.enabled"></v-checkbox>
                                 <v-combobox dense class="px-1 pt-2" label="Name" v-model="header.name" :items="commonRequestHeaders()" @focus="onFocus($event)" :menu-props='{ "maxHeight": 200 }'></v-combobox>
